@@ -16,12 +16,22 @@ namespace CslAppOrmEntityFramework.Models
         public DbSet<Post> Post { get; set; }
         public DbSet<Tag> Tag { get; set; }
 
+        public DbSet<Author> Author { get; set; }
+        public DbSet<Book> Book { get; set; }
+        public DbSet<AuthorBook> AuthorBook { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new Map.PersonMap());
             modelBuilder.Configurations.Add(new Map.AddressMap());
             modelBuilder.Configurations.Add(new Map.PostMap());
             modelBuilder.Configurations.Add(new Map.TagMap());
+
+            modelBuilder.Configurations.Add(new Map.AuthorMap());
+            modelBuilder.Configurations.Add(new Map.BookMap());
+            modelBuilder.Configurations.Add(new Map.AuthorBookMap());
+
+
         }
     }
 }

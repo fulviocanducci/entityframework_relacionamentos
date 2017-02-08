@@ -61,8 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\AuthorBook.cs" />
+    <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Ctx.cs" />
     <Compile Include="Models\Map\AddressMap.cs" />
+    <Compile Include="Models\Map\AuthorBookMap.cs" />
+    <Compile Include="Models\Map\AuthorMap.cs" />
+    <Compile Include="Models\Map\BookMap.cs" />
     <Compile Include="Models\Map\PersonMap.cs" />
     <Compile Include="Models\Map\PostMap.cs" />
     <Compile Include="Models\Map\TagMap.cs" />

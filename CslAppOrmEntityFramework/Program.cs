@@ -72,12 +72,44 @@ namespace CslAppOrmEntityFramework
 
                 //db.Post.Add(post);                
 
-                Post post = db.Post.Include("Tags")
-                    .Include("Person")
-                    .Where(c => c.Id == 4)
-                    .FirstOrDefault();
+                //Post post = db.Post.Include("Tags")
+                //    .Include("Person")
+                //    .Where(c => c.Id == 4)
+                //    .FirstOrDefault();
 
                 //db.SaveChanges();
+
+                //Author author = new Author();
+                //author.Name = "Roberto de Abreu";
+
+                //Book book = new Book();
+                //book.Title = "Harry Potter";
+
+                //AuthorBook authorBook = new AuthorBook();
+                //authorBook.Author = author;
+                //authorBook.Book = book;
+                //authorBook.Year = 2005;
+
+
+                //db.Author.Add(author);
+                //db.Book.Add(book);
+                //db.AuthorBook.Add(authorBook);
+
+                //db.SaveChanges();
+
+                AuthorBook _ab = db.AuthorBook
+                    .Include("Author")
+                    .Include("Book")
+                    .Where(c => c.AuthorId == 2 && c.BookId == 2)
+                    .FirstOrDefault();
+
+                var a = db.Author
+                    .Include("AuthorBooks")
+                    .FirstOrDefault(c => c.Id == 1);  
+                
+                
+
+
             }
 
             System.Console.ReadKey();
