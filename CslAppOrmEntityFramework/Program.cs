@@ -97,19 +97,43 @@ namespace CslAppOrmEntityFramework
 
                 //db.SaveChanges();
 
-                AuthorBook _ab = db.AuthorBook
-                    .Include("Author")
-                    .Include("Book")
-                    .Where(c => c.AuthorId == 2 && c.BookId == 2)
-                    .FirstOrDefault();
+                //AuthorBook _ab = db.AuthorBook
+                //    .Include("Author")
+                //    .Include("Book")
+                //    .Where(c => c.AuthorId == 2 && c.BookId == 2)
+                //    .FirstOrDefault();
 
-                var a = db.Author
-                    .Include("AuthorBooks")
-                    .FirstOrDefault(c => c.Id == 1);  
+                //var a = db.Author
+                //    .Include("AuthorBooks")
+                //    .FirstOrDefault(c => c.Id == 1);  
+
+
+                //Author author = new Author();
+                //author.Name = "Roberto de Abreu III";
+
+                //Book book = new Book();
+                //book.Title = "Harry Potter III";
+
+                //AuthorBook authorBook = new AuthorBook
+                //{
+                //    Author = author,
+                //    Book = book,
+                //    Year = 2015
+                //};
+
+                //db.Book.Add(book);
+                //db.Author.Add(author);
+                //db.AuthorBook.Add(authorBook);
+
+                //db.SaveChanges();
+
+                ClientJuridical cj = new ClientJuridical();
+                cj.Doc = "12345678901234";
+                cj.Name = "Client 1";
+
+                db.Client.Add(cj);
+                db.SaveChanges();
                 
-                
-
-
             }
 
             System.Console.ReadKey();

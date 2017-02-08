@@ -20,6 +20,7 @@ namespace CslAppOrmEntityFramework.Models
         public DbSet<Book> Book { get; set; }
         public DbSet<AuthorBook> AuthorBook { get; set; }
 
+        public DbSet<Client> Client { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new Map.PersonMap());
@@ -31,6 +32,8 @@ namespace CslAppOrmEntityFramework.Models
             modelBuilder.Configurations.Add(new Map.BookMap());
             modelBuilder.Configurations.Add(new Map.AuthorBookMap());
 
+            modelBuilder.Configurations.Add(new Map.ClientMap());
+            modelBuilder.Configurations.Add(new Map.ClientJuridicalMap());
 
         }
     }
