@@ -127,12 +127,15 @@ namespace CslAppOrmEntityFramework
 
                 //db.SaveChanges();
 
-                ClientJuridical cj = new ClientJuridical();
-                cj.Doc = "12345678901234";
-                cj.Name = "Client 1";
+                //ClientJuridical cj = new ClientJuridical();
+                //cj.Doc = "12345678901234";
+                //cj.Name = "Client 1";
 
-                db.Client.Add(cj);
-                db.SaveChanges();
+                //db.Client.Add(cj);
+                //db.SaveChanges();
+
+                var a = db.Client.OfType<ClientJuridical>()
+                    .FirstOrDefault(c => c.Id == 1);
                 
             }
 
