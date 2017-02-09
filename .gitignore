@@ -9,8 +9,8 @@ x64/
 x86/
 build/
 bld/
-CslAppOrmEntityFramework/[Bb]in/
-CslAppOrmEntityFramework/[Oo]bj/
+[Bb]in/
+[Oo]bj/
 
 # Visual Studio 2015 cache/options directory
 .vs/
