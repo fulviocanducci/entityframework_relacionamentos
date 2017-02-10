@@ -134,8 +134,8 @@ namespace CslAppOrmEntityFramework
                 //db.Client.Add(cj);
                 //db.SaveChanges();
 
-                var a = db.Client.OfType<ClientJuridical>()
-                    .FirstOrDefault(c => c.Id == 1);
+                var cjs = db.Client.OfType<ClientJuridical>()
+                    .ToList();               
                 
             }
 
